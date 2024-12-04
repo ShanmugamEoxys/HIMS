@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Master Suite" >
+	
+	<groups>
+		<run>
+			<include name="Master" />
+
+			
+		</run>
+	</groups>
+	<listeners>
+		<listener class-name="utilities.ExtentReportManager"></listener>
+	</listeners>
+	
+	<test thread-count="1" name="Test">
+
+		<parameter name="os" value="Windows"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
+
+		<classes>
+			
+			 <class name="testCases.AddOrganizationTest"></class>
+			 <class name="testCases.UHID_CreationTest" />
+		</classes>
+	</test> <!--
+	
+	
+
+</suite> 
+Suite -->
+</suite>

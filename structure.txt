@@ -1,0 +1,25 @@
+Folder PATH listing for volume DATA
+Volume serial number is C030-D0D4
+D:.
++---.settings
++---logs
++---reports
++---screenshots
++---src
+¦   +---main
+¦   +---test
+¦       +---java
+¦       ¦   +---pageObjects
+¦       ¦   +---testCases
+¦       ¦   +---utilities
+¦       +---resources
++---target
+    +---classes
+    ¦   +---META-INF
+    ¦       +---maven
+    ¦           +---HIMS_V1.0
+    ¦               +---HIMS_V1.0
+    +---test-classes
+        +---pageObjects
+        +---testCases
+        +---utilities

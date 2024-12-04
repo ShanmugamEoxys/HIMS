@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-12-04T13:17:59 IST" name="Master Suite" finished-at="2024-12-04T13:19:05 IST" duration-ms="66493">
+    <groups>
+      <group name="Master">
+        <method signature="AddOrganizationTest.verifyAddOrganization()[pri:0, instance:testCases.AddOrganizationTest@1869fbd2]" name="verifyAddOrganization" class="testCases.AddOrganizationTest"/>
+        <method signature="UHID_CreationTest.verify_UHID_Registeration()[pri:0, instance:testCases.UHID_CreationTest@1046d517]" name="verify_UHID_Registeration" class="testCases.UHID_CreationTest"/>
+      </group> <!-- Master -->
+      <group name="Sanity">
+        <method signature="AddOrganizationTest.verifyAddOrganization()[pri:0, instance:testCases.AddOrganizationTest@1869fbd2]" name="verifyAddOrganization" class="testCases.AddOrganizationTest"/>
+      </group> <!-- Sanity -->
+      <group name="Regression">
+        <method signature="UHID_CreationTest.verify_UHID_Registeration()[pri:0, instance:testCases.UHID_CreationTest@1046d517]" name="verify_UHID_Registeration" class="testCases.UHID_CreationTest"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test started-at="2024-12-04T13:17:59 IST" name="Test" finished-at="2024-12-04T13:19:05 IST" duration-ms="66493">
+      <class name="testCases.AddOrganizationTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.AddOrganizationTest@1869fbd2]" started-at="2024-12-04T13:17:59 IST" name="setup" finished-at="2024-12-04T13:18:08 IST" duration-ms="8875" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAddOrganization()[pri:0, instance:testCases.AddOrganizationTest@1869fbd2]" started-at="2024-12-04T13:18:08 IST" name="verifyAddOrganization" finished-at="2024-12-04T13:18:21 IST" duration-ms="12868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddOrganization -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.AddOrganizationTest@1869fbd2]" started-at="2024-12-04T13:18:21 IST" name="teardown" finished-at="2024-12-04T13:18:23 IST" duration-ms="2585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testCases.AddOrganizationTest -->
+      <class name="testCases.UHID_CreationTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.UHID_CreationTest@1046d517]" started-at="2024-12-04T13:18:23 IST" name="setup" finished-at="2024-12-04T13:18:32 IST" duration-ms="9124" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verify_UHID_Registeration()[pri:0, instance:testCases.UHID_CreationTest@1046d517]" started-at="2024-12-04T13:18:32 IST" name="verify_UHID_Registeration" finished-at="2024-12-04T13:19:03 IST" duration-ms="30551" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_UHID_Registeration -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.UHID_CreationTest@1046d517]" started-at="2024-12-04T13:19:03 IST" name="teardown" finished-at="2024-12-04T13:19:05 IST" duration-ms="2295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testCases.UHID_CreationTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Master Suite -->
+</testng-results>
