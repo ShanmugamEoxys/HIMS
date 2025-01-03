@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.AddOrganizationTest">
+      <class name="testCases.UHID_CreationTest">
         <methods>
+          <include name="verify_UHID_Registeration"/>
           <include name="setup"/>
-          <include name="verifyAddOrganization"/>
         </methods>
-      </class> <!-- testCases.AddOrganizationTest -->
+      </class> <!-- testCases.UHID_CreationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

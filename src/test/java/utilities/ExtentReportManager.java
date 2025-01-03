@@ -1,3 +1,4 @@
+
 package utilities;
 
 import java.awt.Desktop;
@@ -54,8 +55,8 @@ public class ExtentReportManager implements ITestListener {
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
 		extent.setSystemInfo("Application", "HIMS");
-		extent.setSystemInfo("Module", "Admin");
-		extent.setSystemInfo("Sub Module", "OP Module");
+		extent.setSystemInfo("Module 1", "Admin");
+		extent.setSystemInfo("Module 2", "OP");
 		extent.setSystemInfo("User Name", System.getProperty("user.name"));
 		extent.setSystemInfo("Environemnt", "QA");
 
@@ -67,7 +68,7 @@ public class ExtentReportManager implements ITestListener {
 
 		List<String> includedGroups = testContext.getCurrentXmlTest().getIncludedGroups();
 		if (!includedGroups.isEmpty()) {
-			extent.setSystemInfo("Groups", includedGroups.toString());
+			extent.setSystemInfo("Type Of Testing", includedGroups.toString());
 		}
 	}
 
@@ -187,3 +188,4 @@ public class ExtentReportManager implements ITestListener {
 	}
 
 }
+

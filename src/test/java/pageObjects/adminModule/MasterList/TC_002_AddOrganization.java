@@ -15,7 +15,7 @@ import pageObjects.Basepage;
 public class TC_002_AddOrganization extends Basepage {
 
 	public TC_002_AddOrganization(WebDriver driver) {
-		super(driver);
+		super(driver);  // Calls the constructor of Basepage
 	}
 
 	@FindBy(xpath = "//*[@data-testid='AddIcon']")
@@ -36,7 +36,7 @@ public class TC_002_AddOrganization extends Basepage {
 	@FindBy(xpath = "//*[@name='orgCountry']")
 	WebElement selectCountry;
 
-	@FindBy(xpath = "//*[@class='MuiAutocomplete-listbox css-gdh49b-MuiAutocomplete-listbox']/li")
+	@FindBy(xpath = "//*[contains(@class,'MuiAutocomplete-listbox')]/li")
 	WebElement chooseCountryName;
 
 	@FindBy(xpath = "//*[@id='orgState']")
@@ -52,7 +52,10 @@ public class TC_002_AddOrganization extends Basepage {
 	WebElement clkSubmitButton;
 
 	public void setAddOrgbtn() {
-		clkAddOrgbtn.click();
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    wait.until(ExpectedConditions.elementToBeClickable(clkAddOrgbtn));
+	    clkAddOrgbtn.click();
+	    
 	}
 
 	public void setOrgName(String orgname) {
@@ -77,11 +80,11 @@ public class TC_002_AddOrganization extends Basepage {
 		// We wait the list of country available
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@class='MuiAutocomplete-listbox css-gdh49b-MuiAutocomplete-listbox']/li")));
+				By.xpath("//*[contains(@class,'MuiAutocomplete-listbox')]/li")));
 
 		// Find all country list items
 		List<WebElement> countriesList = driver
-				.findElements(By.xpath("//*[@class='MuiAutocomplete-listbox css-gdh49b-MuiAutocomplete-listbox']/li"));
+				.findElements(By.xpath("//*[contains(@class,'MuiAutocomplete-listbox')]/li"));
 
 		// Iterate through the list items in the dropdown and select the desired country
 
@@ -99,11 +102,11 @@ public class TC_002_AddOrganization extends Basepage {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(
-				"//*[@class='MuiList-root MuiList-padding MuiMenu-list css-6hp17o-MuiList-root-MuiMenu-list']/li")));
+				"//*[contains(@class,'MuiList-root MuiList-padding')]/li")));
 		// find all list items
 
 		List<WebElement> regionsList = driver.findElements(By.xpath(
-				"//*[@class='MuiList-root MuiList-padding MuiMenu-list css-6hp17o-MuiList-root-MuiMenu-list']/li"));
+				"//*[contains(@class,'MuiList-root MuiList-padding')]/li"));
 
 		for (WebElement regions : regionsList) {
 			if (regions.getText().equals("Karnataka")) {
@@ -118,11 +121,11 @@ public class TC_002_AddOrganization extends Basepage {
 		selectCityName.click();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(
-				"//*[@class='MuiList-root MuiList-padding MuiMenu-list css-6hp17o-MuiList-root-MuiMenu-list']/li")));
+				"//*[contains(@aria-labelledby,'orgCity-label')]/li")));
 
 		// find all city list items
 		List<WebElement> cityList = driver.findElements(By.xpath(
-				"//*[@class='MuiList-root MuiList-padding MuiMenu-list css-6hp17o-MuiList-root-MuiMenu-list']/li"));
+				"//*[contains(@aria-labelledby,'orgCity-label')]/li"));
 
 		for (WebElement cities : cityList) {
 			if (cities.getText().equals("Bengaluru")) {
@@ -140,4 +143,5 @@ public class TC_002_AddOrganization extends Basepage {
 	public void setSubmit() {
 		clkSubmitButton.click();
 	}
+	
 }

@@ -32,28 +32,28 @@ public class TC_001_UHID_Creation extends Basepage {
 	@FindBy(xpath = "//button[@aria-label='calendar view is open, switch to year view']")
 	WebElement yearsMenu;
 
-	@FindBy(xpath = "//div[@class='MuiYearCalendar-root css-1vs7z2v-MuiYearCalendar-root']/div")
+	@FindBy(xpath = "//*[contains(@class,'MuiYearCalendar-root')]//div")
 	List<WebElement> years;
 
-	@FindBy(xpath = "//*[@class='MuiPickersFadeTransitionGroup-root css-31ca4x-MuiPickersFadeTransitionGroup-root']//div")
+	@FindBy(xpath = "//*[contains(@class,'MuiPickersCalendarHeader-label')]/div")
 	WebElement monthsDisplay;
 
 	@FindBy(xpath = "//button[@title='Previous month']")
 	WebElement prevMonthButton;
 
-	@FindBy(xpath = "//*[@class='MuiDayCalendar-monthContainer css-12p2adl-MuiDayCalendar-monthContainer']/div/button")
+	@FindBy(xpath = "//*[contains(@class,'MuiDayCalendar-monthContainer')]//button")
 	List<WebElement> dates;
 
 	@FindBy(xpath = "//div[@id='patientType']")
 	WebElement patientType;
 
-	@FindBy(xpath = "//*[@class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiPopover-paper MuiMenu-paper MuiMenu-paper css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper']/ul/li[1]")
+	@FindBy(xpath = "//*[contains(@class,'MuiList-root MuiList-padding MuiMenu-list')]/li[1]")
 	WebElement selectPatientType;
 
 	@FindBy(xpath = "//div[@id='sponsers']")
 	WebElement selectSponsorType;
 
-	@FindBy(xpath = "//*[@class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiPopover-paper MuiMenu-paper MuiMenu-paper css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper']//li[2]")
+	@FindBy(xpath = "//*[contains(@class,'MuiList-root MuiList-padding MuiMenu-list')]/li[2]")
 	WebElement chooseSponsorList;
 
 	@FindBy(xpath = "//input[@type='tel']")
@@ -65,7 +65,7 @@ public class TC_001_UHID_Creation extends Basepage {
 	@FindBy(xpath = "//*[@id='mui-component-select-patientAddressCurrentCountry']")
 	WebElement selectCountry;
 
-	@FindBy(xpath = "//*[@class='MuiList-root MuiList-padding MuiMenu-list css-6hp17o-MuiList-root-MuiMenu-list']//li")
+	@FindBy(xpath = "//*[contains(@class,'MuiList-root MuiList-padding MuiMenu-list')]/li")
 	WebElement chooseCountryName;
 
 	@FindBy(xpath = "//*[@id='mui-component-select-patientAddressCurrentStateRegion']")
@@ -83,7 +83,7 @@ public class TC_001_UHID_Creation extends Basepage {
 	@FindBy(xpath = "//*[@id='UHIDpincode']")
 	WebElement enterPincode;
 
-	@FindBy(xpath = "//*[@class='MuiList-root MuiList-padding MuiMenu-list css-6hp17o-MuiList-root-MuiMenu-list']/li[1]")
+	@FindBy(xpath = "//*[contains(@class,'MuiList-root MuiList-padding MuiMenu-list')]/li[1]")
 	WebElement genderList;
 
 	@FindBy(xpath = "//*[@id='createUHID']")
@@ -171,11 +171,11 @@ public class TC_001_UHID_Creation extends Basepage {
 		// We wait the list of country available
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
-				"//*[@class='MuiList-root MuiList-padding MuiMenu-list css-6hp17o-MuiList-root-MuiMenu-list']//li")));
+				"//*[contains(@class,'MuiList-root MuiList-padding MuiMenu-list')]/li")));
 
 		// Find all country list items
 		List<WebElement> countriesList = driver.findElements(By.xpath(
-				"//*[@class='MuiList-root MuiList-padding MuiMenu-list css-6hp17o-MuiList-root-MuiMenu-list']//li"));
+				"//*[contains(@class,'MuiList-root MuiList-padding MuiMenu-list')]/li"));
 
 		// Iterate through the list items in the dropdown and select the desired country
 
@@ -193,11 +193,11 @@ public class TC_001_UHID_Creation extends Basepage {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(
-				"//*[@class='MuiList-root MuiList-padding MuiMenu-list css-6hp17o-MuiList-root-MuiMenu-list']//li")));
+				"//*[contains(@class,'MuiList-root MuiList-padding MuiMenu-list')]/li")));
 		// find all list items
 
 		List<WebElement> regionsList = driver.findElements(By.xpath(
-				"//*[@class='MuiList-root MuiList-padding MuiMenu-list css-6hp17o-MuiList-root-MuiMenu-list']//li"));
+				"//*[contains(@class,'MuiList-root MuiList-padding MuiMenu-list')]/li"));
 
 		for (WebElement regions : regionsList) {
 			if (regions.getText().equals("Karnataka")) {
@@ -212,11 +212,11 @@ public class TC_001_UHID_Creation extends Basepage {
 		selectCityName.click();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(
-				"//*[@class='MuiList-root MuiList-padding MuiMenu-list css-6hp17o-MuiList-root-MuiMenu-list']//li")));
+				"//*[contains(@class,'MuiList-root MuiList-padding MuiMenu-list')]/li")));
 
 		// find all city list items
 		List<WebElement> cityList = driver.findElements(By.xpath(
-				"//*[@class='MuiList-root MuiList-padding MuiMenu-list css-6hp17o-MuiList-root-MuiMenu-list']//li"));
+				"//*[contains(@class,'MuiList-root MuiList-padding MuiMenu-list')]/li"));
 
 		for (WebElement cities : cityList) {
 			if (cities.getText().equals("Bengaluru")) {

@@ -1,3 +1,4 @@
+
 package pageObjects;
 
 import org.openqa.selenium.WebDriver;
@@ -9,7 +10,7 @@ public class Basepage {
 
 	public Basepage(WebDriver driver) {
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this); //initialize the webelements (@Findby)
 	}
 
 	// provide a getter for driver

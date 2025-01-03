@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Master_Suite" class="navigator-link ">
-                    <span>D:\SeleniumWebdriver\HIMS_V1.0\master.xml</span>
+                    <span>D:\SeleniumWebdriver\HIMS_V1.0\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,17 @@
                     <div class="method-list-content passed suite-Master_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Master_Suite" title="testCases.AddOrganizationTest" class="method navigator-link" hash-for-method="verifyAddOrganization">verifyAddOrganization</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Master_Suite" title="testCases.ADMIN.MASTERS.AddLocationTest" class="method navigator-link" hash-for-method="verifyAddLocation">verifyAddLocation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="testCases.ADMIN.MASTERS.AddOrganizationTest" class="method navigator-link" hash-for-method="verifyAddOrganization">verifyAddOrganization</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="testCases.Patient_RegisterationTest" class="method navigator-link" hash-for-method="verify_PaitentRegisteration">verify_PaitentRegisteration</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -126,7 +136,37 @@
           <div class="suite-Master_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testCases.AddOrganizationTest</span>
+              <span class="class-name">testCases.UHID_CreationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_UHID_Registeration">
+                  </a> <!-- verify_UHID_Registeration -->
+                  <span class="method-name">verify_UHID_Registeration</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Master_Suite-class-passed -->
+          <div class="suite-Master_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Patient_RegisterationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_PaitentRegisteration">
+                  </a> <!-- verify_PaitentRegisteration -->
+                  <span class="method-name">verify_PaitentRegisteration</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Master_Suite-class-passed -->
+          <div class="suite-Master_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.ADMIN.MASTERS.AddOrganizationTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -141,14 +181,14 @@
           <div class="suite-Master_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testCases.UHID_CreationTest</span>
+              <span class="class-name">testCases.ADMIN.MASTERS.AddLocationTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verify_UHID_Registeration">
-                  </a> <!-- verify_UHID_Registeration -->
-                  <span class="method-name">verify_UHID_Registeration</span>
+                  <a name="verifyAddLocation">
+                  </a> <!-- verifyAddLocation -->
+                  <span class="method-name">verifyAddLocation</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -156,34 +196,40 @@
         </div> <!-- panel Master_Suite -->
         <div panel-name="test-xml-Master_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\SeleniumWebdriver\HIMS_V1.0\master.xml</span>
+            <span class="header-content">D:\SeleniumWebdriver\HIMS_V1.0\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Master Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Master Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;groups&gt;
     &lt;run&gt;
-      &lt;include name=&quot;Master&quot;/&gt;
+      &lt;include name=&quot;ADMIN Module&quot;/&gt;
+      &lt;include name=&quot;OP Module&quot;/&gt;
+      &lt;include name=&quot;Sanity&quot;/&gt;
     &lt;/run&gt;
   &lt;/groups&gt;
   &lt;groups&gt;
     &lt;run&gt;
-      &lt;include name=&quot;Master&quot;/&gt;
+      &lt;include name=&quot;ADMIN Module&quot;/&gt;
+      &lt;include name=&quot;OP Module&quot;/&gt;
+      &lt;include name=&quot;Sanity&quot;/&gt;
     &lt;/run&gt;
   &lt;/groups&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;utilities.ExtentReportManager&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;1&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Admin and OP Module Tests&quot; verbose=&quot;0&quot;&gt;
     &lt;parameter name=&quot;os&quot; value=&quot;Windows&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testCases.AddOrganizationTest&quot;/&gt;
+      &lt;class name=&quot;testCases.ADMIN.MASTERS.AddOrganizationTest&quot;/&gt;
+      &lt;class name=&quot;testCases.ADMIN.MASTERS.AddLocationTest&quot;/&gt;
       &lt;class name=&quot;testCases.UHID_CreationTest&quot;/&gt;
+      &lt;class name=&quot;testCases.Patient_RegisterationTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- Admin and OP Module Tests --&gt;
 &lt;/suite&gt; &lt;!-- Master Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -195,7 +241,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Admin and OP Module Tests (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -206,20 +252,24 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">Master</span>
+              <span class="test-group-name">ADMIN Module</span>
               <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyAddLocation</span>
+                <br/>
+              </div> <!-- method-in-group -->
               <div class="method-in-group">
                 <span class="method-in-group-name">verifyAddOrganization</span>
                 <br/>
               </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">verify_UHID_Registeration</span>
-                <br/>
-              </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
-              <span class="test-group-name">Regression</span>
+              <span class="test-group-name">OP Module</span>
               <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verify_PaitentRegisteration</span>
+                <br/>
+              </div> <!-- method-in-group -->
               <div class="method-in-group">
                 <span class="method-in-group-name">verify_UHID_Registeration</span>
                 <br/>
@@ -229,7 +279,19 @@
               <span class="test-group-name">Sanity</span>
               <br/>
               <div class="method-in-group">
+                <span class="method-in-group-name">verifyAddLocation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">verifyAddOrganization</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verify_PaitentRegisteration</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verify_UHID_Registeration</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -249,20 +311,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verify_UHID_Registeration')
-data.setCell(0, 2, 'testCases.UHID_CreationTest')
-data.setCell(0, 3, 30551);
+data.setCell(0, 1, 'verify_PaitentRegisteration')
+data.setCell(0, 2, 'testCases.Patient_RegisterationTest')
+data.setCell(0, 3, 36648);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyAddOrganization')
-data.setCell(1, 2, 'testCases.AddOrganizationTest')
-data.setCell(1, 3, 12868);
+data.setCell(1, 1, 'verify_UHID_Registeration')
+data.setCell(1, 2, 'testCases.UHID_CreationTest')
+data.setCell(1, 3, 19185);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyAddOrganization')
+data.setCell(2, 2, 'testCases.ADMIN.MASTERS.AddOrganizationTest')
+data.setCell(2, 3, 12781);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyAddLocation')
+data.setCell(3, 2, 'testCases.ADMIN.MASTERS.AddLocationTest')
+data.setCell(3, 3, 2482);
 window.suiteTableData['Master_Suite']= { tableData: data, tableDiv: 'times-div-Master_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 43 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Master_Suite">
               </div> <!-- times-div-Master_Suite -->
             </div> <!-- times-div -->
@@ -288,33 +358,63 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testCases.AddOrganizationTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testCases.ADMIN.MASTERS.AddOrganizationTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(Windows, chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyAddOrganization</span>
-                <span class="method-start">8886 ms</span>
+                <span class="method-start">4721 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">21780 ms</span>
+                <span class="method-start">17528 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.ADMIN.MASTERS.AddLocationTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup(Windows, chrome)</span>
+                <span class="method-start">17956 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddLocation</span>
+                <span class="method-start">21850 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">24334 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.UHID_CreationTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(Windows, chrome)</span>
-                <span class="method-start">24368 ms</span>
+                <span class="method-start">24573 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verify_UHID_Registeration</span>
-                <span class="method-start">33493 ms</span>
+                <span class="method-start">28651 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">64048 ms</span>
+                <span class="method-start">47839 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Patient_RegisterationTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup(Windows, chrome)</span>
+                <span class="method-start">48203 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verify_PaitentRegisteration</span>
+                <span class="method-start">52173 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">88827 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

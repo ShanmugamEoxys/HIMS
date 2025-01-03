@@ -32,7 +32,7 @@ public class BaseClass {
 	public Logger logger;
 	public Properties p;
 
-	@BeforeClass(groups = { "Sanity", "Regression", "Master" })
+	@BeforeClass(groups = { "ADMIN Module","OP Module","Sanity" })
 	@Parameters({ "os", "browser" })
 	public void setup(@Optional("Windows") String os, @Optional("edge") String br) throws IOException {
 
@@ -41,7 +41,7 @@ public class BaseClass {
 		p = new Properties();
 		p.load(file);
 
-		logger = LogManager.getLogger(this.getClass());
+		logger = LogManager.getLogger(this.getClass()); //intitialize the Log4J logger for logging.
 
 		if(p.getProperty("execution_env").equalsIgnoreCase("remote"))
 		{
@@ -94,7 +94,7 @@ public class BaseClass {
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-		driver.get(p.getProperty("appURL1"));
+		driver.get(p.getProperty("appURL2"));
 
 		driver.manage().window().maximize();
 
@@ -124,6 +124,24 @@ public class BaseClass {
 		return (str + num);
 	}
 
+	public String randomEmailFormat()
+	{
+		String str = RandomStringUtils.randomAlphabetic(5);
+		String num = RandomStringUtils.randomNumeric(4);
+		return (str+num+"@gmail.com");
+	}
+	
+	public String randomHouseNo()
+	{
+		String num = RandomStringUtils.randomNumeric(3);
+		return (num);
+	}
+	
+	public String randomHouseName() {
+		String str = RandomStringUtils.randomAlphabetic(7);
+		return (str);
+	}
+	
 	public String captureScreen(String tname) throws IOException {
 
 		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
@@ -139,10 +157,10 @@ public class BaseClass {
 		return targetFilePath;
 
 	}
-
-	@AfterClass(groups = { "Sanity", "Regression", "Master" })
+	
+	@AfterClass(groups = { "ADMIN Module","OP Module","Sanity" })
 	public void teardown() {
-		driver.quit();
+	driver.quit();
 	}
 
 }

@@ -1,49 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-04T13:17:59 IST" name="Master Suite" finished-at="2024-12-04T13:19:05 IST" duration-ms="66493">
+  <suite started-at="2025-01-03T15:05:19 IST" name="Master Suite" finished-at="2025-01-03T15:06:49 IST" duration-ms="89400">
     <groups>
-      <group name="Master">
-        <method signature="AddOrganizationTest.verifyAddOrganization()[pri:0, instance:testCases.AddOrganizationTest@1869fbd2]" name="verifyAddOrganization" class="testCases.AddOrganizationTest"/>
-        <method signature="UHID_CreationTest.verify_UHID_Registeration()[pri:0, instance:testCases.UHID_CreationTest@1046d517]" name="verify_UHID_Registeration" class="testCases.UHID_CreationTest"/>
-      </group> <!-- Master -->
       <group name="Sanity">
-        <method signature="AddOrganizationTest.verifyAddOrganization()[pri:0, instance:testCases.AddOrganizationTest@1869fbd2]" name="verifyAddOrganization" class="testCases.AddOrganizationTest"/>
+        <method signature="AddLocationTest.verifyAddLocation()[pri:0, instance:testCases.ADMIN.MASTERS.AddLocationTest@265adfad]" name="verifyAddLocation" class="testCases.ADMIN.MASTERS.AddLocationTest"/>
+        <method signature="AddOrganizationTest.verifyAddOrganization()[pri:0, instance:testCases.ADMIN.MASTERS.AddOrganizationTest@c9d0d6]" name="verifyAddOrganization" class="testCases.ADMIN.MASTERS.AddOrganizationTest"/>
+        <method signature="Patient_RegisterationTest.verify_PaitentRegisteration()[pri:0, instance:testCases.Patient_RegisterationTest@61544ae6]" name="verify_PaitentRegisteration" class="testCases.Patient_RegisterationTest"/>
+        <method signature="UHID_CreationTest.verify_UHID_Registeration()[pri:0, instance:testCases.UHID_CreationTest@a3d9978]" name="verify_UHID_Registeration" class="testCases.UHID_CreationTest"/>
       </group> <!-- Sanity -->
-      <group name="Regression">
-        <method signature="UHID_CreationTest.verify_UHID_Registeration()[pri:0, instance:testCases.UHID_CreationTest@1046d517]" name="verify_UHID_Registeration" class="testCases.UHID_CreationTest"/>
-      </group> <!-- Regression -->
+      <group name="ADMIN Module">
+        <method signature="AddLocationTest.verifyAddLocation()[pri:0, instance:testCases.ADMIN.MASTERS.AddLocationTest@265adfad]" name="verifyAddLocation" class="testCases.ADMIN.MASTERS.AddLocationTest"/>
+        <method signature="AddOrganizationTest.verifyAddOrganization()[pri:0, instance:testCases.ADMIN.MASTERS.AddOrganizationTest@c9d0d6]" name="verifyAddOrganization" class="testCases.ADMIN.MASTERS.AddOrganizationTest"/>
+      </group> <!-- ADMIN Module -->
+      <group name="OP Module">
+        <method signature="Patient_RegisterationTest.verify_PaitentRegisteration()[pri:0, instance:testCases.Patient_RegisterationTest@61544ae6]" name="verify_PaitentRegisteration" class="testCases.Patient_RegisterationTest"/>
+        <method signature="UHID_CreationTest.verify_UHID_Registeration()[pri:0, instance:testCases.UHID_CreationTest@a3d9978]" name="verify_UHID_Registeration" class="testCases.UHID_CreationTest"/>
+      </group> <!-- OP Module -->
     </groups>
-    <test started-at="2024-12-04T13:17:59 IST" name="Test" finished-at="2024-12-04T13:19:05 IST" duration-ms="66493">
-      <class name="testCases.AddOrganizationTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.AddOrganizationTest@1869fbd2]" started-at="2024-12-04T13:17:59 IST" name="setup" finished-at="2024-12-04T13:18:08 IST" duration-ms="8875" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Windows]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyAddOrganization()[pri:0, instance:testCases.AddOrganizationTest@1869fbd2]" started-at="2024-12-04T13:18:08 IST" name="verifyAddOrganization" finished-at="2024-12-04T13:18:21 IST" duration-ms="12868" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAddOrganization -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.AddOrganizationTest@1869fbd2]" started-at="2024-12-04T13:18:21 IST" name="teardown" finished-at="2024-12-04T13:18:23 IST" duration-ms="2585" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- testCases.AddOrganizationTest -->
+    <test started-at="2025-01-03T15:05:19 IST" name="Admin and OP Module Tests" finished-at="2025-01-03T15:06:49 IST" duration-ms="89400">
       <class name="testCases.UHID_CreationTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.UHID_CreationTest@1046d517]" started-at="2024-12-04T13:18:23 IST" name="setup" finished-at="2024-12-04T13:18:32 IST" duration-ms="9124" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.UHID_CreationTest@a3d9978]" started-at="2025-01-03T15:05:44 IST" name="setup" finished-at="2025-01-03T15:05:48 IST" duration-ms="4078" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -59,15 +37,93 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verify_UHID_Registeration()[pri:0, instance:testCases.UHID_CreationTest@1046d517]" started-at="2024-12-04T13:18:32 IST" name="verify_UHID_Registeration" finished-at="2024-12-04T13:19:03 IST" duration-ms="30551" status="PASS">
+        <test-method signature="verify_UHID_Registeration()[pri:0, instance:testCases.UHID_CreationTest@a3d9978]" started-at="2025-01-03T15:05:48 IST" name="verify_UHID_Registeration" finished-at="2025-01-03T15:06:07 IST" duration-ms="19185" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_UHID_Registeration -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.UHID_CreationTest@1046d517]" started-at="2024-12-04T13:19:03 IST" name="teardown" finished-at="2024-12-04T13:19:05 IST" duration-ms="2295" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.UHID_CreationTest@a3d9978]" started-at="2025-01-03T15:06:07 IST" name="teardown" finished-at="2025-01-03T15:06:08 IST" duration-ms="363" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- testCases.UHID_CreationTest -->
-    </test> <!-- Test -->
+      <class name="testCases.ADMIN.MASTERS.AddOrganizationTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.ADMIN.MASTERS.AddOrganizationTest@c9d0d6]" started-at="2025-01-03T15:05:19 IST" name="setup" finished-at="2025-01-03T15:05:24 IST" duration-ms="4713" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAddOrganization()[pri:0, instance:testCases.ADMIN.MASTERS.AddOrganizationTest@c9d0d6]" started-at="2025-01-03T15:05:24 IST" name="verifyAddOrganization" finished-at="2025-01-03T15:05:37 IST" duration-ms="12781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddOrganization -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.ADMIN.MASTERS.AddOrganizationTest@c9d0d6]" started-at="2025-01-03T15:05:37 IST" name="teardown" finished-at="2025-01-03T15:05:37 IST" duration-ms="427" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testCases.ADMIN.MASTERS.AddOrganizationTest -->
+      <class name="testCases.Patient_RegisterationTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.Patient_RegisterationTest@61544ae6]" started-at="2025-01-03T15:06:08 IST" name="setup" finished-at="2025-01-03T15:06:12 IST" duration-ms="3969" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verify_PaitentRegisteration()[pri:0, instance:testCases.Patient_RegisterationTest@61544ae6]" started-at="2025-01-03T15:06:12 IST" name="verify_PaitentRegisteration" finished-at="2025-01-03T15:06:48 IST" duration-ms="36648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_PaitentRegisteration -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.Patient_RegisterationTest@61544ae6]" started-at="2025-01-03T15:06:48 IST" name="teardown" finished-at="2025-01-03T15:06:49 IST" duration-ms="390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testCases.Patient_RegisterationTest -->
+      <class name="testCases.ADMIN.MASTERS.AddLocationTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.ADMIN.MASTERS.AddLocationTest@265adfad]" started-at="2025-01-03T15:05:37 IST" name="setup" finished-at="2025-01-03T15:05:41 IST" duration-ms="3893" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAddLocation()[pri:0, instance:testCases.ADMIN.MASTERS.AddLocationTest@265adfad]" started-at="2025-01-03T15:05:41 IST" name="verifyAddLocation" finished-at="2025-01-03T15:05:44 IST" duration-ms="2482" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddLocation -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.ADMIN.MASTERS.AddLocationTest@265adfad]" started-at="2025-01-03T15:05:44 IST" name="teardown" finished-at="2025-01-03T15:05:44 IST" duration-ms="239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testCases.ADMIN.MASTERS.AddLocationTest -->
+    </test> <!-- Admin and OP Module Tests -->
   </suite> <!-- Master Suite -->
 </testng-results>

@@ -2,18 +2,18 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-04T12:02:34 IST" name="Master Suite" finished-at="2024-12-04T12:03:05 IST" duration-ms="31788">
+  <suite started-at="2025-01-03T15:04:05 IST" name="Default suite" finished-at="2025-01-03T15:04:30 IST" duration-ms="25534">
     <groups>
-      <group name="Master">
-        <method signature="UHID_CreationTest.verify_UHID_Registeration()[pri:0, instance:testCases.UHID_CreationTest@6138e79a]" name="verify_UHID_Registeration" class="testCases.UHID_CreationTest"/>
-      </group> <!-- Master -->
-      <group name="Regression">
-        <method signature="UHID_CreationTest.verify_UHID_Registeration()[pri:0, instance:testCases.UHID_CreationTest@6138e79a]" name="verify_UHID_Registeration" class="testCases.UHID_CreationTest"/>
-      </group> <!-- Regression -->
+      <group name="Sanity">
+        <method signature="UHID_CreationTest.verify_UHID_Registeration()[pri:0, instance:testCases.UHID_CreationTest@33feb805]" name="verify_UHID_Registeration" class="testCases.UHID_CreationTest"/>
+      </group> <!-- Sanity -->
+      <group name="OP Module">
+        <method signature="UHID_CreationTest.verify_UHID_Registeration()[pri:0, instance:testCases.UHID_CreationTest@33feb805]" name="verify_UHID_Registeration" class="testCases.UHID_CreationTest"/>
+      </group> <!-- OP Module -->
     </groups>
-    <test started-at="2024-12-04T12:02:34 IST" name="Test" finished-at="2024-12-04T12:03:05 IST" duration-ms="31788">
+    <test started-at="2025-01-03T15:04:05 IST" name="Default test" finished-at="2025-01-03T15:04:30 IST" duration-ms="25534">
       <class name="testCases.UHID_CreationTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.UHID_CreationTest@6138e79a]" started-at="2024-12-04T12:02:34 IST" name="setup" finished-at="2024-12-04T12:02:42 IST" duration-ms="8341" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.UHID_CreationTest@33feb805]" started-at="2025-01-03T15:04:05 IST" name="setup" finished-at="2025-01-03T15:04:11 IST" duration-ms="5960" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,22 +22,18 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verify_UHID_Registeration()[pri:0, instance:testCases.UHID_CreationTest@6138e79a]" started-at="2024-12-04T12:02:42 IST" name="verify_UHID_Registeration" finished-at="2024-12-04T12:03:05 IST" duration-ms="22725" status="PASS">
+        <test-method signature="verify_UHID_Registeration()[pri:0, instance:testCases.UHID_CreationTest@33feb805]" started-at="2025-01-03T15:04:11 IST" name="verify_UHID_Registeration" finished-at="2025-01-03T15:04:30 IST" duration-ms="19505" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_UHID_Registeration -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.UHID_CreationTest@6138e79a]" started-at="2024-12-04T12:03:05 IST" name="teardown" finished-at="2024-12-04T12:03:05 IST" duration-ms="539" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
       </class> <!-- testCases.UHID_CreationTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Master Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

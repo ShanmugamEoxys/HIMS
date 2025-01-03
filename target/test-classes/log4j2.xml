@@ -20,8 +20,8 @@
 	</Appenders>
 	<Loggers>
 		<Root level="OFF">
-			<!-- <AppenderRef ref="Console"/> -->
-			<AppenderRef ref="File" />
+			<!--  <AppenderRef ref="Console"/> 
+			 <AppenderRef ref="File" />-->
 		</Root>
 	</Loggers>
 </Configuration>

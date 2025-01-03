@@ -1,8 +1,12 @@
 D:\SeleniumWebdriver\HIMS_V1.0\src\test\java\pageObjects\adminModule\MasterList\TC_002_AddOrganization.java
+D:\SeleniumWebdriver\HIMS_V1.0\src\test\java\pageObjects\adminModule\MasterList\TC_004_AddLocation.java
 D:\SeleniumWebdriver\HIMS_V1.0\src\test\java\pageObjects\Basepage.java
 D:\SeleniumWebdriver\HIMS_V1.0\src\test\java\pageObjects\Homepage.java
 D:\SeleniumWebdriver\HIMS_V1.0\src\test\java\pageObjects\opModule\TC_001_UHID_Creation.java
+D:\SeleniumWebdriver\HIMS_V1.0\src\test\java\pageObjects\opModule\TC_003_PatientRegisteration.java
 D:\SeleniumWebdriver\HIMS_V1.0\src\test\java\testBase\BaseClass.java
-D:\SeleniumWebdriver\HIMS_V1.0\src\test\java\testCases\AddOrganizationTest.java
+D:\SeleniumWebdriver\HIMS_V1.0\src\test\java\testCases\ADMIN\MASTERS\AddLocationTest.java
+D:\SeleniumWebdriver\HIMS_V1.0\src\test\java\testCases\ADMIN\MASTERS\AddOrganizationTest.java
+D:\SeleniumWebdriver\HIMS_V1.0\src\test\java\testCases\Patient_RegisterationTest.java
 D:\SeleniumWebdriver\HIMS_V1.0\src\test\java\testCases\UHID_CreationTest.java
 D:\SeleniumWebdriver\HIMS_V1.0\src\test\java\utilities\ExtentReportManager.java

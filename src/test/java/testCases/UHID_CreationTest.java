@@ -8,7 +8,7 @@ import testBase.BaseClass;
 
 public class UHID_CreationTest extends BaseClass {
 
-	@Test(groups={"Regression" ,"Master"} )
+	@Test(groups={"Sanity","OP Module"} )
 	public void verify_UHID_Registeration() {
 
 		logger.info("*******Starting TC001_UHID Registeration Test******");
@@ -26,7 +26,7 @@ public class UHID_CreationTest extends BaseClass {
 		logger.info("Providing Patient Details....");
 		UHID_Page.setFirstName(randomString().toUpperCase());
 		UHID_Page.setLastName(randomString().toUpperCase());
-		UHID_Page.setDOB("1999");
+		UHID_Page.setDOB("2024");
 		UHID_Page.setMonth("January");
 		UHID_Page.setDate("24");
 		UHID_Page.setPatientType();
