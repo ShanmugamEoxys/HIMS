@@ -22,6 +22,7 @@
 		<classes>
 			<class name="testCases.ADMIN.MASTERS.AddOrganizationTest"></class>
 			<class name="testCases.ADMIN.MASTERS.AddLocationTest"></class>
+			<class name="testCases.ADMIN.MASTERS.AddDepartmentsTest"></class>
 			<class name="testCases.UHID_CreationTest" />
 			<class name="testCases.Patient_RegisterationTest"></class>
 

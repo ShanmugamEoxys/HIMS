@@ -32,7 +32,7 @@ public class BaseClass {
 	public Logger logger;
 	public Properties p;
 
-	@BeforeClass(groups = { "ADMIN Module","OP Module","Sanity" })
+	@BeforeClass(groups = { "ADMIN Module", "OP Module", "Sanity" })
 	@Parameters({ "os", "browser" })
 	public void setup(@Optional("Windows") String os, @Optional("edge") String br) throws IOException {
 
@@ -41,54 +41,59 @@ public class BaseClass {
 		p = new Properties();
 		p.load(file);
 
-		logger = LogManager.getLogger(this.getClass()); //intitialize the Log4J logger for logging.
+		logger = LogManager.getLogger(this.getClass()); // intitialize the Log4J logger for logging.
 
-		if(p.getProperty("execution_env").equalsIgnoreCase("remote"))
-		{
-			DesiredCapabilities capabilities=new DesiredCapabilities();
-			
-			//os
-			if(os.equalsIgnoreCase("windows"))
-			{
+		if (p.getProperty("execution_env").equalsIgnoreCase("remote")) {
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+
+			// os
+			if (os.equalsIgnoreCase("windows")) {
 				capabilities.setPlatform(Platform.WIN11);
-			}
-			else if (os.equalsIgnoreCase("mac"))
-			{
+			} else if (os.equalsIgnoreCase("mac")) {
 				capabilities.setPlatform(Platform.MAC);
-			}
-			else if(os.equalsIgnoreCase("linux"))
-			{
+			} else if (os.equalsIgnoreCase("linux")) {
 				capabilities.setPlatform(Platform.LINUX);
 			}
-			
-			else
-			{
+
+			else {
 				System.out.println("No matching os");
 				return;
 			}
-			
-			//browser
-			switch(br.toLowerCase())
-			{
-			case "chrome": capabilities.setBrowserName("chrome"); break;
-			case "edge": capabilities.setBrowserName("MicrosoftEdge"); break;
-			case "firefox":capabilities.setBrowserName("firefox");break;
-			default: System.out.println("No matching browser"); return;
-			}
-			
-			driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capabilities);
-		}
-		
-				
-		if(p.getProperty("execution_env").equalsIgnoreCase("local"))
-		{
 
-			switch(br.toLowerCase())
-			{
-			case "chrome" : driver=new ChromeDriver(); break;
-			case "edge" : driver=new EdgeDriver(); break;
-			case "firefox": driver=new FirefoxDriver(); break;
-			default : System.out.println("Invalid browser name.."); return;
+			// browser
+			switch (br.toLowerCase()) {
+			case "chrome":
+				capabilities.setBrowserName("chrome");
+				break;
+			case "edge":
+				capabilities.setBrowserName("MicrosoftEdge");
+				break;
+			case "firefox":
+				capabilities.setBrowserName("firefox");
+				break;
+			default:
+				System.out.println("No matching browser");
+				return;
+			}
+
+			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
+		}
+
+		if (p.getProperty("execution_env").equalsIgnoreCase("local")) {
+
+			switch (br.toLowerCase()) {
+			case "chrome":
+				driver = new ChromeDriver();
+				break;
+			case "edge":
+				driver = new EdgeDriver();
+				break;
+			case "firefox":
+				driver = new FirefoxDriver();
+				break;
+			default:
+				System.out.println("Invalid browser name..");
+				return;
 			}
 		}
 
@@ -124,24 +129,22 @@ public class BaseClass {
 		return (str + num);
 	}
 
-	public String randomEmailFormat()
-	{
+	public String randomEmailFormat() {
 		String str = RandomStringUtils.randomAlphabetic(5);
 		String num = RandomStringUtils.randomNumeric(4);
-		return (str+num+"@gmail.com");
+		return (str + num + "@gmail.com");
 	}
-	
-	public String randomHouseNo()
-	{
+
+	public String randomHouseNo() {
 		String num = RandomStringUtils.randomNumeric(3);
 		return (num);
 	}
-	
+
 	public String randomHouseName() {
 		String str = RandomStringUtils.randomAlphabetic(7);
 		return (str);
 	}
-	
+
 	public String captureScreen(String tname) throws IOException {
 
 		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
@@ -157,10 +160,10 @@ public class BaseClass {
 		return targetFilePath;
 
 	}
-	
-	@AfterClass(groups = { "ADMIN Module","OP Module","Sanity" })
+
+	@AfterClass(groups = { "ADMIN Module", "OP Module", "Sanity" })
 	public void teardown() {
-	driver.quit();
+		driver.quit();
 	}
 
 }
