@@ -145,6 +145,11 @@ public class BaseClass {
 		return (str);
 	}
 
+	public String randomFloorNo() {
+		String floor = RandomStringUtils.randomNumeric(2);
+		return floor;
+	}
+
 	public String captureScreen(String tname) throws IOException {
 
 		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
