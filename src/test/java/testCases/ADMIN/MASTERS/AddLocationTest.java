@@ -19,7 +19,7 @@ public class AddLocationTest extends BaseClass {
 		addLoc.setAddLoc();
 		hp.clkMenuClose();
 		addLoc.setAddLocOpen(); //Entering the Add location fields
-		addLoc.setLocName();
+		addLoc.setLocName(randomString().toUpperCase());
 		addLoc.setOrgList();
 		addLoc.setAdd();
 	}

@@ -15,10 +15,10 @@ public class TC_004_AddLocation extends Basepage {
 		super(driver);
 	}
 
-	@FindBy(xpath = "//*[contains(text(),'Location')]")
+	@FindBy(xpath = "//div[normalize-space()='Location']")
 	WebElement clkAddLocation;
 
-	@FindBy(xpath = "//*[contains(text(),'Add LAD')]")
+	@FindBy(xpath = "//*[contains(text(),' Add Location')]")
 	WebElement clkLocationMenu;
 
 	@FindBy(xpath = "//*[@id='ladName']")
@@ -42,15 +42,15 @@ public class TC_004_AddLocation extends Basepage {
 		clkLocationMenu.click();
 	}
 
-	public void setLocName() {
-		enterLocaName.sendKeys("Bengaluru");
+	public void setLocName(String name) {
+		enterLocaName.sendKeys(name);
 	}
 
 	public void setOrgList() {
 		clkOrgList.click();
 		List<WebElement> orgLists = slctOrgList.findElements(By.tagName("li"));
 		for (WebElement orgList : orgLists) {
-			if (orgList.getText().equalsIgnoreCase("RVPWIRJ")) {
+			if (orgList.getText().equalsIgnoreCase("CIANUDI")) {
 				orgList.click();
 				break;
 			}

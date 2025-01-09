@@ -53,7 +53,7 @@ public class TC_001_UHID_Creation extends Basepage {
 	@FindBy(xpath = "//div[@id='sponsers']")
 	WebElement selectSponsorType;
 
-	@FindBy(xpath = "//*[contains(@class,'MuiList-root MuiList-padding MuiMenu-list')]/li[2]")
+	@FindBy(xpath = "//*[contains(@class,'MuiList-root MuiList-padding MuiMenu-list')]/li[1]")
 	WebElement chooseSponsorList;
 
 	@FindBy(xpath = "//input[@type='tel']")

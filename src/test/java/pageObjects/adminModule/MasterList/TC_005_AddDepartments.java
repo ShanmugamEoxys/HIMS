@@ -50,7 +50,7 @@ public class TC_005_AddDepartments extends Basepage {
 
 		List<WebElement> orgDepList = slctOrgList.findElements(By.tagName("li"));
 		for (WebElement orgDepLists : orgDepList) {
-			if (orgDepLists.getText().equalsIgnoreCase("CVIYXFT")) {
+			if (orgDepLists.getText().equalsIgnoreCase("CIANUDI")) {
 				orgDepLists.click();
 				break;
 			}
