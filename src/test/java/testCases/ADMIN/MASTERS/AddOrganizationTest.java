@@ -8,15 +8,15 @@ import testBase.BaseClass;
 
 public class AddOrganizationTest extends BaseClass {
 
-	@Test(groups={"Sanity","ADMIN Module"})
+	@Test(groups = { "Sanity", "ADMIN Module" })
 	public void verifyAddOrganization() {
-		Homepage hp = new Homepage(driver);     // homepage object is created.
+		Homepage hp = new Homepage(driver); // homepage object is created.
 		hp.clkMenuopen();
 		hp.clkAdmincategory();
 
-		TC_002_AddOrganization addOrg = new TC_002_AddOrganization(driver);   // add organization object is created
+		TC_002_AddOrganization addOrg = new TC_002_AddOrganization(driver); // add organization object is created
 		addOrg.setAddOrgbtn();
-		
+
 		addOrg.setOrgName(randomString().toUpperCase());
 		addOrg.setOrgEmail(randomAlphaNumeric());
 		addOrg.setOrgContact(randomNumber());

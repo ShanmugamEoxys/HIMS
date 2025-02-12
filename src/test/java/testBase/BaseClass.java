@@ -10,6 +10,8 @@ import java.util.Date;
 import java.util.Properties;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.logging.log4j.LogManager; //Log4j
+import org.apache.logging.log4j.Logger; //Log4j
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
@@ -23,8 +25,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-import org.apache.logging.log4j.LogManager; //Log4j
-import org.apache.logging.log4j.Logger; //Log4j
 
 public class BaseClass {
 
@@ -32,7 +32,7 @@ public class BaseClass {
 	public Logger logger;
 	public Properties p;
 
-	@BeforeClass(groups = { "ADMIN Module", "OP Module", "Sanity" })
+	@BeforeClass(groups = { "ADMIN Module", "OP Module", "Warehouse Module", "Sanity" })
 	@Parameters({ "os", "browser" })
 	public void setup(@Optional("Windows") String os, @Optional("edge") String br) throws IOException {
 
@@ -150,6 +150,16 @@ public class BaseClass {
 		return floor;
 	}
 
+	public String randomBedCharge() {
+		String bedCharge = RandomStringUtils.randomNumeric(4);
+		return bedCharge;
+	}
+
+	public String randomOrderValue() {
+		String orderValue = RandomStringUtils.randomNumeric(3);
+		return orderValue;
+	}
+	
 	public String captureScreen(String tname) throws IOException {
 
 		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
@@ -166,7 +176,7 @@ public class BaseClass {
 
 	}
 
-	@AfterClass(groups = { "ADMIN Module", "OP Module", "Sanity" })
+	@AfterClass(groups = { "ADMIN Module", "OP Module", "Warehouse Module", "Sanity" })
 	public void teardown() {
 		driver.quit();
 	}

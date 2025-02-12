@@ -57,6 +57,7 @@ public class ExtentReportManager implements ITestListener {
 		extent.setSystemInfo("Application", "HIMS");
 		extent.setSystemInfo("Module 1", "Admin");
 		extent.setSystemInfo("Module 2", "OP");
+		extent.setSystemInfo("Module 3", "Warehouse");
 		extent.setSystemInfo("User Name", System.getProperty("user.name"));
 		extent.setSystemInfo("Environemnt", "QA");
 

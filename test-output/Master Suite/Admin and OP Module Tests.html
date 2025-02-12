@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Admin and OP Module Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>11/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jan 09 15:19:18 IST 2025</td>
+<td>Started on:</td><td>Wed Feb 12 12:53:55 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>110 seconds (110475 ms)</td>
+<tr><td>Total time:</td><td>187 seconds (187236 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>Sanity ADMIN Module OP Module </td>
 </tr><tr>
@@ -67,6 +67,57 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.ADMIN.MASTERS.AddFloorsTest.verifyAddFloors()'><b>verifyAddFloors</b><br>Test class: testCases.ADMIN.MASTERS.AddFloorsTest</td>
+<td><div><pre>java.lang.AssertionError: ❌ Floor Added Test Failed expected [Floor added successfully] but found [Floor number already exists]
+	at pageObjects.adminModule.MasterList.TC_006_AddFloors.setSubmitFloor(TC_006_AddFloors.java:62)
+	at testCases.ADMIN.MASTERS.AddFloorsTest.verifyAddFloors(AddFloorsTest.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace362233212", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace362233212'><pre>java.lang.AssertionError: ❌ Floor Added Test Failed expected [Floor added successfully] but found [Floor number already exists]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at pageObjects.adminModule.MasterList.TC_006_AddFloors.setSubmitFloor(TC_006_AddFloors.java:62)
+	at testCases.ADMIN.MASTERS.AddFloorsTest.verifyAddFloors(AddFloorsTest.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>2</td>
+<td>testCases.ADMIN.MASTERS.AddFloorsTest@59b38691</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -78,38 +129,58 @@ function toggleAllBoxes() {
 <tr>
 <td title='testCases.ADMIN.MASTERS.AddDepartmentsTest.verifyAddDepartment()'><b>verifyAddDepartment</b><br>Test class: testCases.ADMIN.MASTERS.AddDepartmentsTest</td>
 <td></td>
-<td>2</td>
-<td>testCases.ADMIN.MASTERS.AddDepartmentsTest@797cf65c</td></tr>
-<tr>
-<td title='testCases.ADMIN.MASTERS.AddLocationTest.verifyAddLocation()'><b>verifyAddLocation</b><br>Test class: testCases.ADMIN.MASTERS.AddLocationTest</td>
-<td></td>
-<td>2</td>
-<td>testCases.ADMIN.MASTERS.AddLocationTest@66ac5762</td></tr>
+<td>3</td>
+<td>testCases.ADMIN.MASTERS.AddDepartmentsTest@5dd1c9f2</td></tr>
 <tr>
 <td title='testCases.UHID_CreationTest.verify_UHID_Registeration()'><b>verify_UHID_Registeration</b><br>Test class: testCases.UHID_CreationTest</td>
 <td></td>
 <td>17</td>
-<td>testCases.UHID_CreationTest@4fad9bb2</td></tr>
-<tr>
-<td title='testCases.ADMIN.MASTERS.AddOrganizationTest.verifyAddOrganization()'><b>verifyAddOrganization</b><br>Test class: testCases.ADMIN.MASTERS.AddOrganizationTest</td>
-<td></td>
-<td>12</td>
-<td>testCases.ADMIN.MASTERS.AddOrganizationTest@6dee4f1b</td></tr>
-<tr>
-<td title='testCases.ADMIN.MASTERS.AddFloorsTest.verifyAddFloors()'><b>verifyAddFloors</b><br>Test class: testCases.ADMIN.MASTERS.AddFloorsTest</td>
-<td></td>
-<td>1</td>
-<td>testCases.ADMIN.MASTERS.AddFloorsTest@31bcf236</td></tr>
-<tr>
-<td title='testCases.ADMIN.MASTERS.AddWardsTest.verifyAddWards()'><b>verifyAddWards</b><br>Test class: testCases.ADMIN.MASTERS.AddWardsTest</td>
-<td></td>
-<td>3</td>
-<td>testCases.ADMIN.MASTERS.AddWardsTest@4b3ed2f0</td></tr>
+<td>testCases.UHID_CreationTest@17aad511</td></tr>
 <tr>
 <td title='testCases.Patient_RegisterationTest.verify_PaitentRegisteration()'><b>verify_PaitentRegisteration</b><br>Test class: testCases.Patient_RegisterationTest</td>
 <td></td>
 <td>36</td>
-<td>testCases.Patient_RegisterationTest@517d4a0d</td></tr>
+<td>testCases.Patient_RegisterationTest@487db668</td></tr>
+<tr>
+<td title='testCases.Warehouse.Item_Creation_Test.verifyItemCreation()'><b>verifyItemCreation</b><br>Test class: testCases.Warehouse.Item_Creation_Test<br>Parameters: 100mg</td>
+<td></td>
+<td>24</td>
+<td>testCases.Warehouse.Item_Creation_Test@76884e4b</td></tr>
+<tr>
+<td title='testCases.ADMIN.MASTERS.AddWardsTest.verifyAddWards()'><b>verifyAddWards</b><br>Test class: testCases.ADMIN.MASTERS.AddWardsTest</td>
+<td></td>
+<td>4</td>
+<td>testCases.ADMIN.MASTERS.AddWardsTest@2e2ff723</td></tr>
+<tr>
+<td title='testCases.ADMIN.MASTERS.AddCounterTest.verifyAddCounters()'><b>verifyAddCounters</b><br>Test class: testCases.ADMIN.MASTERS.AddCounterTest</td>
+<td></td>
+<td>4</td>
+<td>testCases.ADMIN.MASTERS.AddCounterTest@7502291e</td></tr>
+<tr>
+<td title='testCases.ADMIN.MASTERS.AddIDProofTest.verifyAddID_Proofs()'><b>verifyAddID_Proofs</b><br>Test class: testCases.ADMIN.MASTERS.AddIDProofTest</td>
+<td></td>
+<td>2</td>
+<td>testCases.ADMIN.MASTERS.AddIDProofTest@2445445a</td></tr>
+<tr>
+<td title='testCases.ADMIN.MASTERS.AddLocationTest.verifyAddLocation()'><b>verifyAddLocation</b><br>Test class: testCases.ADMIN.MASTERS.AddLocationTest<br>Parameters: CIANUDI</td>
+<td></td>
+<td>4</td>
+<td>testCases.ADMIN.MASTERS.AddLocationTest@a22cb6a</td></tr>
+<tr>
+<td title='testCases.ADMIN.MASTERS.AddRoomsTest.verifyAddRooms()'><b>verifyAddRooms</b><br>Test class: testCases.ADMIN.MASTERS.AddRoomsTest</td>
+<td></td>
+<td>10</td>
+<td>testCases.ADMIN.MASTERS.AddRoomsTest@324a0017</td></tr>
+<tr>
+<td title='testCases.ADMIN.MASTERS.AddBedMastersTest.verifyAddBedMasters()'><b>verifyAddBedMasters</b><br>Test class: testCases.ADMIN.MASTERS.AddBedMastersTest</td>
+<td></td>
+<td>13</td>
+<td>testCases.ADMIN.MASTERS.AddBedMastersTest@6187d1f5</td></tr>
+<tr>
+<td title='testCases.ADMIN.MASTERS.AddOrganizationTest.verifyAddOrganization()'><b>verifyAddOrganization</b><br>Test class: testCases.ADMIN.MASTERS.AddOrganizationTest</td>
+<td></td>
+<td>11</td>
+<td>testCases.ADMIN.MASTERS.AddOrganizationTest@142269f2</td></tr>
 </table><p>
 </body>
 </html>

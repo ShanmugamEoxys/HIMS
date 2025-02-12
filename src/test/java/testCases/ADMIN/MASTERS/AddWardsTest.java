@@ -22,6 +22,7 @@ public class AddWardsTest extends BaseClass {
 		addWard.setWardLocation();
 		addWard.setWardFloor();
 		addWard.setAddNewWard();
+		
 	}
 
 }

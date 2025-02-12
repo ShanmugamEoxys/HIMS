@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Master_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Master Suite</span>
+              <span class="suite-name border-failed">Master Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Master_Suite" class="navigator-link ">
-                    <span>3 groups</span>
+                    <span>4 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,   7 passed</span>
+                    <span class="method-stats">12 methods, 1 failed,   11 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Master_Suite" class="hide-methods failed suite-Master_Suite"> (hide)</a> <!-- hide-methods failed suite-Master_Suite -->
+                      <a href="#" panel-name="suite-Master_Suite" class="show-methods failed suite-Master_Suite"> (show)</a> <!-- show-methods failed suite-Master_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Master_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="testCases.ADMIN.MASTERS.AddFloorsTest" class="method navigator-link" hash-for-method="verifyAddFloors">verifyAddFloors</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Master_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,17 +117,27 @@
                     <div class="method-list-content passed suite-Master_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="testCases.ADMIN.MASTERS.AddBedMastersTest" class="method navigator-link" hash-for-method="verifyAddBedMasters">verifyAddBedMasters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="testCases.ADMIN.MASTERS.AddCounterTest" class="method navigator-link" hash-for-method="verifyAddCounters">verifyAddCounters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Master_Suite" title="testCases.ADMIN.MASTERS.AddDepartmentsTest" class="method navigator-link" hash-for-method="verifyAddDepartment">verifyAddDepartment</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Master_Suite" title="testCases.ADMIN.MASTERS.AddFloorsTest" class="method navigator-link" hash-for-method="verifyAddFloors">verifyAddFloors</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Master_Suite" title="testCases.ADMIN.MASTERS.AddIDProofTest" class="method navigator-link" hash-for-method="verifyAddID_Proofs">verifyAddID_Proofs</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Master_Suite" title="testCases.ADMIN.MASTERS.AddLocationTest" class="method navigator-link" hash-for-method="verifyAddLocation">verifyAddLocation</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Master_Suite" title="testCases.ADMIN.MASTERS.AddLocationTest" class="method navigator-link" hash-for-method="verifyAddLocation(CIANUDI)">verifyAddLocation(CIANUDI)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -123,7 +147,17 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="testCases.ADMIN.MASTERS.AddRoomsTest" class="method navigator-link" hash-for-method="verifyAddRooms">verifyAddRooms</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Master_Suite" title="testCases.ADMIN.MASTERS.AddWardsTest" class="method navigator-link" hash-for-method="verifyAddWards">verifyAddWards</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="testCases.Warehouse.Item_Creation_Test" class="method navigator-link" hash-for-method="verifyItemCreation(100mg)">verifyItemCreation(100mg)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -148,36 +182,31 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Master_Suite" class="panel Master_Suite">
-          <div class="suite-Master_Suite-class-passed">
+          <div class="suite-Master_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testCases.ADMIN.MASTERS.AddLocationTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">testCases.ADMIN.MASTERS.AddFloorsTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyAddLocation">
-                  </a> <!-- verifyAddLocation -->
-                  <span class="method-name">verifyAddLocation</span>
+                  <a name="verifyAddFloors">
+                  </a> <!-- verifyAddFloors -->
+                  <span class="method-name">verifyAddFloors</span>
+                  <div class="stack-trace">java.lang.AssertionError: ❌ Floor Added Test Failed expected [Floor added successfully] but found [Floor number already exists]
+	at pageObjects.adminModule.MasterList.TC_006_AddFloors.setSubmitFloor(TC_006_AddFloors.java:62)
+	at testCases.ADMIN.MASTERS.AddFloorsTest.verifyAddFloors(AddFloorsTest.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 20 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Master_Suite-class-passed -->
-          <div class="suite-Master_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testCases.ADMIN.MASTERS.AddOrganizationTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyAddOrganization">
-                  </a> <!-- verifyAddOrganization -->
-                  <span class="method-name">verifyAddOrganization</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Master_Suite-class-passed -->
+          </div> <!-- suite-Master_Suite-class-failed -->
           <div class="suite-Master_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -196,14 +225,15 @@
           <div class="suite-Master_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testCases.ADMIN.MASTERS.AddFloorsTest</span>
+              <span class="class-name">testCases.Warehouse.Item_Creation_Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyAddFloors">
-                  </a> <!-- verifyAddFloors -->
-                  <span class="method-name">verifyAddFloors</span>
+                  <a name="verifyItemCreation(100mg)">
+                  </a> <!-- verifyItemCreation(100mg) -->
+                  <span class="method-name">verifyItemCreation</span>
+                  <span class="parameters">(100mg)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -211,14 +241,29 @@
           <div class="suite-Master_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testCases.ADMIN.MASTERS.AddDepartmentsTest</span>
+              <span class="class-name">testCases.ADMIN.MASTERS.AddRoomsTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyAddDepartment">
-                  </a> <!-- verifyAddDepartment -->
-                  <span class="method-name">verifyAddDepartment</span>
+                  <a name="verifyAddRooms">
+                  </a> <!-- verifyAddRooms -->
+                  <span class="method-name">verifyAddRooms</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Master_Suite-class-passed -->
+          <div class="suite-Master_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.ADMIN.MASTERS.AddBedMastersTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddBedMasters">
+                  </a> <!-- verifyAddBedMasters -->
+                  <span class="method-name">verifyAddBedMasters</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -241,6 +286,67 @@
           <div class="suite-Master_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">testCases.ADMIN.MASTERS.AddOrganizationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddOrganization">
+                  </a> <!-- verifyAddOrganization -->
+                  <span class="method-name">verifyAddOrganization</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Master_Suite-class-passed -->
+          <div class="suite-Master_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.ADMIN.MASTERS.AddCounterTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddCounters">
+                  </a> <!-- verifyAddCounters -->
+                  <span class="method-name">verifyAddCounters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Master_Suite-class-passed -->
+          <div class="suite-Master_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.ADMIN.MASTERS.AddLocationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddLocation(CIANUDI)">
+                  </a> <!-- verifyAddLocation(CIANUDI) -->
+                  <span class="method-name">verifyAddLocation</span>
+                  <span class="parameters">(CIANUDI)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Master_Suite-class-passed -->
+          <div class="suite-Master_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.ADMIN.MASTERS.AddIDProofTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddID_Proofs">
+                  </a> <!-- verifyAddID_Proofs -->
+                  <span class="method-name">verifyAddID_Proofs</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Master_Suite-class-passed -->
+          <div class="suite-Master_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">testCases.UHID_CreationTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -249,6 +355,21 @@
                   <a name="verify_UHID_Registeration">
                   </a> <!-- verify_UHID_Registeration -->
                   <span class="method-name">verify_UHID_Registeration</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Master_Suite-class-passed -->
+          <div class="suite-Master_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.ADMIN.MASTERS.AddDepartmentsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddDepartment">
+                  </a> <!-- verifyAddDepartment -->
+                  <span class="method-name">verifyAddDepartment</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -289,8 +410,13 @@
       &lt;class name=&quot;testCases.ADMIN.MASTERS.AddDepartmentsTest&quot;/&gt;
       &lt;class name=&quot;testCases.ADMIN.MASTERS.AddFloorsTest&quot;/&gt;
       &lt;class name=&quot;testCases.ADMIN.MASTERS.AddWardsTest&quot;/&gt;
+      &lt;class name=&quot;testCases.ADMIN.MASTERS.AddRoomsTest&quot;/&gt;
+      &lt;class name=&quot;testCases.ADMIN.MASTERS.AddBedMastersTest&quot;/&gt;
+      &lt;class name=&quot;testCases.ADMIN.MASTERS.AddIDProofTest&quot;/&gt;
+      &lt;class name=&quot;testCases.ADMIN.MASTERS.AddCounterTest&quot;/&gt;
       &lt;class name=&quot;testCases.UHID_CreationTest&quot;/&gt;
       &lt;class name=&quot;testCases.Patient_RegisterationTest&quot;/&gt;
+      &lt;class name=&quot;testCases.Warehouse.Item_Creation_Test&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Admin and OP Module Tests --&gt;
 &lt;/suite&gt; &lt;!-- Master Suite --&gt;
@@ -304,7 +430,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Admin and OP Module Tests (7 classes)</span>
+                <span class="test-name">Admin and OP Module Tests (12 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -318,6 +444,14 @@
               <span class="test-group-name">ADMIN Module</span>
               <br/>
               <div class="method-in-group">
+                <span class="method-in-group-name">verifyAddBedMasters</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyAddCounters</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">verifyAddDepartment</span>
                 <br/>
               </div> <!-- method-in-group -->
@@ -326,11 +460,19 @@
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
+                <span class="method-in-group-name">verifyAddID_Proofs</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">verifyAddLocation</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
                 <span class="method-in-group-name">verifyAddOrganization</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyAddRooms</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
@@ -354,11 +496,23 @@
               <span class="test-group-name">Sanity</span>
               <br/>
               <div class="method-in-group">
+                <span class="method-in-group-name">verifyAddBedMasters</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyAddCounters</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">verifyAddDepartment</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
                 <span class="method-in-group-name">verifyAddFloors</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyAddID_Proofs</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
@@ -370,7 +524,15 @@
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
+                <span class="method-in-group-name">verifyAddRooms</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">verifyAddWards</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyItemCreation</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
@@ -379,6 +541,14 @@
               </div> <!-- method-in-group -->
               <div class="method-in-group">
                 <span class="method-in-group-name">verify_UHID_Registeration</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">Warehouse Module</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyItemCreation</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -398,40 +568,60 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(12);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verify_PaitentRegisteration')
 data.setCell(0, 2, 'testCases.Patient_RegisterationTest')
-data.setCell(0, 3, 36359);
+data.setCell(0, 3, 36010);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verify_UHID_Registeration')
-data.setCell(1, 2, 'testCases.UHID_CreationTest')
-data.setCell(1, 3, 17538);
+data.setCell(1, 1, 'verifyItemCreation')
+data.setCell(1, 2, 'testCases.Warehouse.Item_Creation_Test')
+data.setCell(1, 3, 24379);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyAddOrganization')
-data.setCell(2, 2, 'testCases.ADMIN.MASTERS.AddOrganizationTest')
-data.setCell(2, 3, 12717);
+data.setCell(2, 1, 'verify_UHID_Registeration')
+data.setCell(2, 2, 'testCases.UHID_CreationTest')
+data.setCell(2, 3, 17825);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyAddWards')
-data.setCell(3, 2, 'testCases.ADMIN.MASTERS.AddWardsTest')
-data.setCell(3, 3, 3052);
+data.setCell(3, 1, 'verifyAddBedMasters')
+data.setCell(3, 2, 'testCases.ADMIN.MASTERS.AddBedMastersTest')
+data.setCell(3, 3, 13918);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyAddDepartment')
-data.setCell(4, 2, 'testCases.ADMIN.MASTERS.AddDepartmentsTest')
-data.setCell(4, 3, 2389);
+data.setCell(4, 1, 'verifyAddOrganization')
+data.setCell(4, 2, 'testCases.ADMIN.MASTERS.AddOrganizationTest')
+data.setCell(4, 3, 11860);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyAddLocation')
-data.setCell(5, 2, 'testCases.ADMIN.MASTERS.AddLocationTest')
-data.setCell(5, 3, 2379);
+data.setCell(5, 1, 'verifyAddRooms')
+data.setCell(5, 2, 'testCases.ADMIN.MASTERS.AddRoomsTest')
+data.setCell(5, 3, 10812);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyAddFloors')
-data.setCell(6, 2, 'testCases.ADMIN.MASTERS.AddFloorsTest')
-data.setCell(6, 3, 1913);
+data.setCell(6, 1, 'verifyAddWards')
+data.setCell(6, 2, 'testCases.ADMIN.MASTERS.AddWardsTest')
+data.setCell(6, 3, 4425);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyAddCounters')
+data.setCell(7, 2, 'testCases.ADMIN.MASTERS.AddCounterTest')
+data.setCell(7, 3, 4319);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyAddLocation')
+data.setCell(8, 2, 'testCases.ADMIN.MASTERS.AddLocationTest')
+data.setCell(8, 3, 4005);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'verifyAddDepartment')
+data.setCell(9, 2, 'testCases.ADMIN.MASTERS.AddDepartmentsTest')
+data.setCell(9, 3, 3541);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifyAddID_Proofs')
+data.setCell(10, 2, 'testCases.ADMIN.MASTERS.AddIDProofTest')
+data.setCell(10, 3, 2779);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verifyAddFloors')
+data.setCell(11, 2, 'testCases.ADMIN.MASTERS.AddFloorsTest')
+data.setCell(11, 3, 2734);
 window.suiteTableData['Master_Suite']= { tableData: data, tableDiv: 'times-div-Master_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Master_Suite">
               </div> <!-- times-div-Master_Suite -->
             </div> <!-- times-div -->
@@ -464,101 +654,178 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyAddOrganization</span>
-                <span class="method-start">5515 ms</span>
+                <span class="method-start">4145 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">18267 ms</span>
+                <span class="method-start">16042 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.ADMIN.MASTERS.AddLocationTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(Windows, chrome)</span>
-                <span class="method-start">18694 ms</span>
+                <span class="method-start">16326 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">verifyAddLocation</span>
-                <span class="method-start">22973 ms</span>
+                <span class="method-name">verifyAddLocation(CIANUDI)</span>
+                <span class="method-start">20142 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">25354 ms</span>
+                <span class="method-start">24152 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.ADMIN.MASTERS.AddDepartmentsTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(Windows, chrome)</span>
-                <span class="method-start">25519 ms</span>
+                <span class="method-start">24344 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyAddDepartment</span>
-                <span class="method-start">30115 ms</span>
+                <span class="method-start">28284 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">32506 ms</span>
+                <span class="method-start">31830 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.ADMIN.MASTERS.AddFloorsTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(Windows, chrome)</span>
-                <span class="method-start">32745 ms</span>
+                <span class="method-start">32018 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifyAddFloors</span>
-                <span class="method-start">37218 ms</span>
+                <span class="method-start">35853 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">39135 ms</span>
+                <span class="method-start">38778 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.ADMIN.MASTERS.AddWardsTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(Windows, chrome)</span>
-                <span class="method-start">39349 ms</span>
+                <span class="method-start">38983 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyAddWards</span>
-                <span class="method-start">43714 ms</span>
+                <span class="method-start">42769 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">46768 ms</span>
+                <span class="method-start">47196 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.ADMIN.MASTERS.AddRoomsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup(Windows, chrome)</span>
+                <span class="method-start">47400 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddRooms</span>
+                <span class="method-start">51151 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">61968 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.ADMIN.MASTERS.AddBedMastersTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup(Windows, chrome)</span>
+                <span class="method-start">62229 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddBedMasters</span>
+                <span class="method-start">66253 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">80175 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.ADMIN.MASTERS.AddIDProofTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup(Windows, chrome)</span>
+                <span class="method-start">80534 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddID_Proofs</span>
+                <span class="method-start">84402 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">87183 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.ADMIN.MASTERS.AddCounterTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup(Windows, chrome)</span>
+                <span class="method-start">87387 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddCounters</span>
+                <span class="method-start">91373 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">95693 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.UHID_CreationTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(Windows, chrome)</span>
-                <span class="method-start">46975 ms</span>
+                <span class="method-start">95890 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verify_UHID_Registeration</span>
-                <span class="method-start">51465 ms</span>
+                <span class="method-start">99904 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">69007 ms</span>
+                <span class="method-start">117733 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.Patient_RegisterationTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(Windows, chrome)</span>
-                <span class="method-start">69306 ms</span>
+                <span class="method-start">118028 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verify_PaitentRegisteration</span>
-                <span class="method-start">73467 ms</span>
+                <span class="method-start">122097 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">109829 ms</span>
+                <span class="method-start">158110 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Warehouse.Item_Creation_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup(Windows, chrome)</span>
+                <span class="method-start">158424 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyItemCreation(100mg)</span>
+                <span class="method-start">162370 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">186752 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

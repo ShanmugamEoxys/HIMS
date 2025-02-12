@@ -22,11 +22,17 @@
 		<classes>
 			<class name="testCases.ADMIN.MASTERS.AddOrganizationTest"></class>
 			<class name="testCases.ADMIN.MASTERS.AddLocationTest"></class>
-			<class name="testCases.ADMIN.MASTERS.AddDepartmentsTest"></class>
+		    <class name="testCases.ADMIN.MASTERS.AddDepartmentsTest"></class>
 			<class name="testCases.ADMIN.MASTERS.AddFloorsTest"></class>
 			<class name="testCases.ADMIN.MASTERS.AddWardsTest"></class>
+			<class name="testCases.ADMIN.MASTERS.AddRoomsTest"></class>
+			<class name="testCases.ADMIN.MASTERS.AddBedMastersTest"></class>
+			<class name="testCases.ADMIN.MASTERS.AddIDProofTest"></class>
+			<class name="testCases.ADMIN.MASTERS.AddCounterTest"></class>
 			<class name="testCases.UHID_CreationTest" />
 			<class name="testCases.Patient_RegisterationTest"></class>
+			<class name="testCases.Warehouse.Item_Creation_Test"></class>
+
 
 		</classes>
 

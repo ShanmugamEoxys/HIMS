@@ -3,6 +3,8 @@ package testCases;
 
 import org.testng.annotations.Test;
 
+
+
 import pageObjects.Homepage;
 import pageObjects.opModule.TC_003_PatientRegisteration;
 import testBase.BaseClass;
@@ -55,6 +57,7 @@ public class Patient_RegisterationTest extends BaseClass {
 		PatRegPage.setFatherSpouseName(randomString().toUpperCase());
 		PatRegPage.setEmePhNo(randomNumber());
 		PatRegPage.setSaveForm(); // final form submit
+		PatRegPage.verifyAfterPatientRegistration();
 	}
 
 }

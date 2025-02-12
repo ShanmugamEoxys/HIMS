@@ -1,0 +1,38 @@
+2025-01-27 12:10:09 INFO  Utils:112 -
+			[Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-27 12:10:10 INFO  Utils:112 -
+			[Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-27 12:10:10 INFO  Utils:112 -
+			[Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-27 12:10:10 INFO  Utils:112 -
+			[Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-27 12:10:10 INFO  Utils:112 -
+			[Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-27 12:10:10 INFO  Utils:112 -
+			[Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-27 12:10:10 INFO  Utils:112 -
+			[Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-27 12:10:10 INFO  Utils:112 -
+			[Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-27 12:10:10 INFO  Utils:112 -
+			[TestNG] Running:
+  C:\Users\Shanmugam\AppData\Local\Temp\testng-eclipse--191911198\testng-customsuite.xml
+
+2025-01-27 12:10:10 INFO  Utils:112 -
+			[Utils] DynamicGraphHelper.createDynamicGraph() took 2 ms.
+2025-01-27 12:10:29 INFO  TC_013_AssignLocationAndSupplier:130 -
+			Entering setDate() method.
+2025-01-27 12:10:29 INFO  TC_013_AssignLocationAndSupplier:143 -
+			Successfully set 'From' and 'To' dates.
+2025-01-27 12:10:30 INFO  Utils:112 -
+			[TestNG] Time taken by org.testng.reporters.jq.Main@69228e85: 91 ms
+2025-01-27 12:10:30 INFO  Utils:112 -
+			[TestNG] Time taken by org.testng.reporters.FailedReporter@7a7cc52c: 1 ms
+2025-01-27 12:10:30 INFO  Utils:112 -
+			[TestNG] Time taken by org.testng.reporters.XMLReporter@55d9b8f0: 14 ms
+2025-01-27 12:10:30 INFO  Utils:112 -
+			[TestNG] Time taken by org.testng.reporters.EmailableReporter2@57402ba1: 12 ms
+2025-01-27 12:10:30 INFO  Utils:112 -
+			[TestNG] Time taken by org.testng.reporters.JUnitReportReporter@2418ba04: 9 ms
+2025-01-27 12:10:30 INFO  Utils:112 -
+			[TestNG] Time taken by org.testng.internal.ExitCodeListener@14229fa7: 0 ms

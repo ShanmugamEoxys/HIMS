@@ -248,57 +248,35 @@ public class TC_001_UHID_Creation extends Basepage {
 	}
 
 	public void verifyUHIDAfterRegistration() {
-		// Step 1: Wait for the success dialog to appear after registration
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15)); // Increased timeout
-		WebElement successDialog = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='dialog']")));
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-		// Step 2: Locate the UHID message inside the dialog
-		WebElement uhidTextElement = successDialog.findElement(By.xpath("//p[contains(text(),'UHID:')]"));
+	    try {
+	        // Wait for success dialog
+	        WebElement successDialog = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='dialog']")));
 
-		// Step 3: Extract the UHID from the message
-		String uhidText = uhidTextElement.getText();
-		String uhid = uhidText.split(":")[1].trim();
+	        // Extract UHID
+	        WebElement uhidTextElement = successDialog.findElement(By.xpath("//p[contains(text(),'UHID:')]"));
+	        String uhid = uhidTextElement.getText().split(":")[1].trim();
+	        System.out.println("✅ Generated UHID: " + uhid);
 
-		// Step 4: Print or log the UHID for verification
-		System.out.println("Generated UHID is: " + uhid);
+	        // Click "View UHID List" button
+	        driver.findElement(By.xpath("//button[contains(text(),'View UHID List')]")).click();
 
-		// Step 5: Click the button to view the UHID List
-		WebElement uhidListButton = driver.findElement(By.xpath("//button[contains(text(),'View UHID List')]"));
-		uhidListButton.click();
+	        // Wait for UHID list to be visible
+	        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'MuiDataGrid-columnHeaderTitle') and text()='Patient UHID']")));
 
-		// Step 6: Adjust the wait to verify the UHID List
-		try {
-			// Wait for the UHID list grid to be visible by checking the presence of the
-			// "Patient UHID" header
-			wait.until(ExpectedConditions.visibilityOfElementLocated(
-					By.xpath("//div[contains(@class, 'MuiDataGrid-columnHeaderTitle') and text()='Patient UHID']")));
+	        // Verify UHID in the list
+	        WebElement uhidInList = driver.findElement(By.xpath("//p[contains(@class, 'MuiTypography-body2') and contains(text(),'" + uhid + "')]"));
 
-//	        // Additional log: Check how many matching elements are present
-//	        List<WebElement> allUhidElements = driver.findElements(By.xpath("//p[contains(@class, 'MuiTypography-body2')]"));
-//	        System.out.println("Number of UHID elements found: " + allUhidElements.size());
-//
-//	        // Log the text content of all matching elements
-//	        for (WebElement element : allUhidElements) {
-//	            System.out.println("UHID Element Text: " + element.getText());
-//	        }
-
-			// Step 7: Use the UHID to locate it in the data grid (adjust the XPath if
-			// necessary)
-			WebElement uhidInList = driver.findElement(
-					By.xpath("//p[contains(@class, 'MuiTypography-body2') and contains(text(),'" + uhid + "')]"));
-
-			if (uhidInList.isDisplayed()) {
-				System.out.println("The registered UHID " + uhid + " is present in the UHID List.");
-			} else {
-				System.out.println("The registered UHID " + uhid + " is NOT found in the UHID List.");
-			}
-		} catch (Exception e) {
-			// Log detailed error information for debugging
-			System.out.println("Error occurred while searching for UHID in the list: " + e.getMessage());
-			e.printStackTrace();
-			System.out.println("Error: The registered UHID " + uhid + " is NOT found in the UHID List.");
-		}
+	        if (uhidInList.isDisplayed()) {
+	            System.out.println("✅ The Registered UHID " + uhid + " is present in the UHID List.");
+	        } else {
+	            System.out.println("❌ The Registered UHID " + uhid + " is NOT found in the UHID List.");
+	        }
+	    } catch (Exception e) {
+	        System.out.println("❌ Error: " + e.getMessage());
+	        e.printStackTrace(); // Ensure error details are printed in the console
+	    }
 	}
 
 }

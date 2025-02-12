@@ -92,8 +92,8 @@ public class TC_003_PatientRegisteration extends Basepage {
 	@FindBy(xpath = "//*[@id='patientIdType']")
 	WebElement clkPatIDType;
 
-	@FindBy(xpath = "//*[contains(@class,'MuiList-root MuiList-padding MuiMenu-list')]/li[1]")
-	WebElement slctIDType;
+	@FindBy(xpath = "//*[contains(@class,'MuiList-root MuiList-padding MuiMenu-list')]/li")
+	List<WebElement> slctIDType;
 
 	@FindBy(xpath = "//*[@id='patientIdNo']")
 	WebElement sendIDNo;
@@ -163,12 +163,13 @@ public class TC_003_PatientRegisteration extends Basepage {
 
 	@FindBy(xpath = "//*[@class=' react-tel-input ']//input[@type='tel']")
 	WebElement emergencyNo;
-	
+
 	@FindBy(xpath = "//*[@id='Save_button']")
 	WebElement clkSave;
-	
-	
-	
+
+	@FindBy(xpath = "//*[contains(text(),'Skip')]")
+	WebElement skip;
+
 	public void setPatientType() {
 
 		patientType.click();
@@ -271,7 +272,14 @@ public class TC_003_PatientRegisteration extends Basepage {
 
 	public void setPatID(String id) {
 		clkPatIDType.click();
-		slctIDType.click();
+		for (WebElement Ids : slctIDType) {
+			if (Ids.getText().equalsIgnoreCase("License")) {
+				Ids.click();
+				break;
+			}
+		}
+
+		// slctIDType.click();
 		sendIDNo.sendKeys(id);
 	}
 
@@ -425,12 +433,47 @@ public class TC_003_PatientRegisteration extends Basepage {
 	public void setFatherSpouseName(String name) {
 		clkFatherSpouseName.sendKeys(name);
 	}
-	
+
 	public void setEmePhNo(String emeNo) {
 		emergencyNo.sendKeys(emeNo);
 	}
 
 	public void setSaveForm() {
 		clkSave.click();
+
+	}
+
+	public void verifyAfterPatientRegistration() {
+		try {
+			// Wait for a success dialog
+			WebElement successMsg = wait
+					.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[role='dialog']")));
+
+			// Extaract UHID
+			WebElement uhidTextElement = successMsg.findElement(By.xpath("//div[contains(text(),'UHID:')]"));
+			String uhid = uhidTextElement.getText().split(":")[1].trim();
+			System.out.println("✅ Generated Patient UHID: " + uhid);
+
+			wait.until(ExpectedConditions.elementToBeClickable(skip));
+			skip.click();
+
+			// Wait for the UHID list to be visible
+			wait.until(ExpectedConditions.visibilityOfElementLocated(
+					By.xpath("//div[contains(@class,'MuiDataGrid-columnHeaderTitle') and text()='Patient UHID']")));
+
+			// Verify UHID in the List
+			WebElement uhidInList = driver.findElement(
+					By.xpath("//p[contains(@class, 'MuiTypography-body2') and contains(text(),'" + uhid + "')]"));
+
+			if (uhidInList.isDisplayed()) {
+				System.out.println("✅ The registered Patient UHID " + uhid + " is present in the UHID List.");
+			} else {
+				System.out.println("❌ The registered UHID " + uhid + " is NOT found in the UHID List.");
+			}
+
+		} catch (Exception e) {
+			System.out.println("❌ Error: " + e.getMessage());
+			e.printStackTrace(); // Ensure error details are printed in the console }
+		}
 	}
 }

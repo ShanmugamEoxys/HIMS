@@ -9,7 +9,7 @@
 			<PatternLayout pattern="${log-pattern}" />
 		</Console>
 		<RollingFile name="File" fileName="${log-path}/automation.log"
-			filePattern="${log-path}/automation-%d{MM-dd-yyyy}-%i.log.gz">
+			filePattern="${log-path}/automation-%d{MM-dd-yyyy}-%i.log">
 			<PatternLayout pattern="${log-pattern}" />
 			<Policies>
 				<TimeBasedTriggeringPolicy />
@@ -20,8 +20,8 @@
 	</Appenders>
 	<Loggers>
 		<Root level="OFF">
-			<!--  <AppenderRef ref="Console"/> 
-			 <AppenderRef ref="File" />-->
+			  <AppenderRef ref="Console"/> 
+			 <AppenderRef ref="File" />
 		</Root>
 	</Loggers>
 </Configuration>
